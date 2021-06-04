@@ -3,7 +3,7 @@ function Login(){
     let password = $("#password").val();
 
     $.ajax({
-            url: "http://localhost:5000/Login?nick=" + username,
+            url: "/API/Login?nick=" + username,
             method: 'GET',
             xhrFields: { withCredentials: true },
             success: LoginSuccess

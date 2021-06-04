@@ -11,7 +11,7 @@ function UpdateUserData(){
 
 function LoadUserData(){
     $.ajax({
-            url: "http://localhost:5000/Account",
+            url: "/API/Account",
             method: 'GET',
             xhrFields: { withCredentials: true },
             success: LoadDataSuccess,
@@ -41,7 +41,7 @@ function GenerateCancel(){
 
 function GenerateNewAddress(){
     $.ajax({
-            url: "http://localhost:5000/PayInAddress",
+            url: "/API/PayInAddress",
             method: 'GET',
             xhrFields: { withCredentials: true },
             success: GenerateNewSuccess
@@ -59,7 +59,7 @@ function ConfirmTransaction(){
     let tx = $("#txId").val();
     if (tx.length==0) return;
     $.ajax({
-            url: "http://localhost:5000/Confirm?txId="+tx,
+            url: "/API/Confirm?txId="+tx,
             method: 'GET',
             xhrFields: { withCredentials: true },
             success: ConfirmTxSuccess,
@@ -95,7 +95,7 @@ function WithdrawCancel(){
 
 function WithdrawAmount(){
     $.ajax({
-            url: "http://localhost:5000/Withdraw?outAddr="+$("#withdrawAddr").val()+"&amount="+$("#withdrawAmount").val(),
+            url: "/API/Withdraw?outAddr="+$("#withdrawAddr").val()+"&amount="+$("#withdrawAmount").val(),
             method: 'GET',
             xhrFields: { withCredentials: true },
             success: WithdrawSuccess,
