@@ -28,3 +28,7 @@ function Signup(){
 function LoginSuccess(data){
     location.href = "./account.html";
 }
+
+function GoBack(){
+    location.href = "./index.html";
+}

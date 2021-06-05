@@ -33,13 +33,73 @@
                     <a class="nav-link" href="account.html">Account</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <button class="btn btn-secondary" type="button" onclick="window.location.href='login.html'">Login</button>
-                <button class="btn btn-secondary" type="button" onclick="window.location.href='signup.html'">Signup</button>
-            </form>
         </div>
     </div>
 </nav>
+
+<div style="display: inline-flex">
+
+    <div class="card border-primary mb-6 card-margin" style="max-width: 50rem;">
+        <div class="card-header">Actions</div>
+        <div class="card-body">
+            <h4 class="card-title">Have a Peek</h4>
+            <p class="card-text">Not Much Here Really</p>
+            <button class="btn btn-primary" type="button" onclick="window.location.href='login.html'">Login</button>
+            <button class="btn btn-success" type="button" onclick="window.location.href='signup.html'">Signup</button>
+        </div>
+    </div>
+
+    <div class="card border-info mb-6 card-margin" style="max-width: 50rem;">
+        <div class="card-header">You Should Know</div>
+        <div class="card-body">
+
+            <h4 class="card-title">Restricted Purchase Sizes</h4>
+            <p class="card-text">Due to our limited supply accounts may be limited in their maximum purchase sizes. Restrictions you face will depend on your purchase history. Therefore new accounts may face tight initial limits.</p>
+
+            <h4 class="card-title">Is My Balance Real?</h4>
+            <p class="card-text">Yes, all of the balance shown on your account is <strong>yours!</strong> Every coin you see is a coin that we have sitting in our master wallet. So you can withdraw from your account whatever happens.</p>
+
+
+            <div style="display: inline-flex">
+                <div>
+                    <h4 class="card-title">What Fee's Do I Get Charged?</h4>
+                    <p class="card-text">
+                        When Withdrawing from your account any <a href="https://atomicwallet.io/blog/academy/network-fees">Network Fee</a> will be <strong>deducted</strong> from your withdrawal.</br>
+                        We also charge a small fee based on the size of your purchase.
+                    </p>
+                </div>
+                <table class="table table-hover" style="width: 50%">
+                    <thead>
+                    <tr>
+                        <th scope="col">£</th>
+                        <th scope="col">Fee</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-active">
+                            <th scope="row">£TBD-£TBD</th>
+                            <td>TBD%</td>
+                        </tr>
+                        <tr class="table-active">
+                            <th scope="row">£TBD-£TBD</th>
+                            <td>TBD%</td>
+                        </tr>
+                        <tr class="table-active">
+                            <th scope="row">£TBD-TBD</th>
+                            <td>TBD%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <h4 class="card-title">Can I Use This As A Web Wallet?</h4>
+            <p class="card-text">Yes, Deposit as much as you want, it will always be yours! However, if you plan to keep a long-term balance with us we <strong>STRONGLY</strong> recommend you register a <strong>Pay Out Address</strong> so that your balance may be returned if necessary.</p>
+
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
