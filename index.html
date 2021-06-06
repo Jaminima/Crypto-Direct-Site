@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
     <script src="js/login.js"></script>
+    <script src="js/page.js"></script>
 
     <link rel="stylesheet" href="site.css">
 </head>
@@ -37,15 +38,16 @@
     </div>
 </nav>
 
-<div style="display: inline-flex">
+<div style="display: inline-flex" id="mainDiv">
 
     <div class="card border-primary mb-6 card-margin" style="max-width: 50rem;">
         <div class="card-header">Actions</div>
         <div class="card-body">
             <h4 class="card-title">Have a Peek</h4>
             <p class="card-text">Not Much Here Really</p>
-            <button class="btn btn-primary" type="button" onclick="window.location.href='login.html'">Login</button>
-            <button class="btn btn-success" type="button" onclick="window.location.href='signup.html'">Signup</button>
+            <button class="btn btn-success" type="button" onclick="window.location.href='signup.html'" id="signupButton" style="width: 100%">Signup</button>
+            </br></br>
+            <button class="btn btn-primary" type="button" onclick="window.location.href='login.html'" id="loginButton" style="width: 100%">Login</button>
         </div>
     </div>
 

@@ -21,7 +21,7 @@ function LoadUserData(){
 }
 
 function LoadDataFail(){
-    location.href="./login.html";
+    //location.href="./login.html";
 }
 
 function LoadDataSuccess(data){
