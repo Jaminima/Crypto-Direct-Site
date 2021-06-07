@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.0.1/dist/quartz/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <script src="js/checkout.js"></script>
+  <script defer src="js/page.js"></script>
+
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid" style="justify-content: left">
+    <a class="navbar-brand" href="#">Web Wallet</a>
+
+    <ul class="nav navbar-nav" id="navbarColor02">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home
+          <span class="visually-hidden">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="account.html">Account</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<div style="display: inline-flex" id="mainDiv">
+
+  <div class="card border-primary mb-6 card-margin" style="max-width: 50rem; min-width: 10rem">
+    <div class="card-header">Actions</div>
+    <div class="card-body">
+      <div>
+        <h4 class="card-title">Have a Peek</h4>
+        <p class="card-text">Not Much Here Really</p>
+        <button type="button" class="btn btn-primary" onclick="CheckOut()">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+</body>
+</html>
