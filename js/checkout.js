@@ -1,5 +1,5 @@
 // Create an instance of the Stripe object with your publishable API key
-var stripe = Stripe("");
+var stripe = Stripe("pk_test_51Izjh5KFVoGzA5vxHI9fkxGWlqI91yaTslKkPxSTtwV4Xc7p6niViUx09SAAjUPv9w4Ur5dUdMBCzEW43tE83hNm00pfLPyGz4");
 
 function CheckOut(){
     fetch("http://localhost:5000/execute-buy", {
