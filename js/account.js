@@ -21,7 +21,7 @@ function LoadUserData(){
 }
 
 function LoadDataFail(){
-    location.href="./login.html";
+    //location.href="./login.html";
 }
 
 function LoadDataSuccess(data){
@@ -32,6 +32,7 @@ function LoadDataSuccess(data){
 function GenerateNewAddressConfirmation(){
     $("#GenerateButton").hide();
     $("#GenerateConfirm").show();
+
 }
 
 function GenerateCancel(){

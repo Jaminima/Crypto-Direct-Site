@@ -1,5 +1,5 @@
 function windowLayout(){
-    if ($(window).width()<$(window).height()){
+    if ($(window).width()<$(window).height() || $(window).width()<$("#mainDiv").width()){
         $("#mainDiv").css('display','block');
     }
     else{
