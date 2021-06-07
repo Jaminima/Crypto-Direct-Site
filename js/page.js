@@ -7,5 +7,20 @@ function windowLayout(){
     }
 }
 
+function getWholeBalance(){
+    $.ajax({
+            url: "/API/Balance",
+            method: 'GET',
+            xhrFields: { withCredentials: true },
+            success: setWholeBalance
+        }
+    );
+}
+
+function setWholeBalance(data){
+    $("#wholeBalance").text(data);
+}
+
 $( window ).resize(windowLayout);
 windowLayout();
+getWholeBalance();
