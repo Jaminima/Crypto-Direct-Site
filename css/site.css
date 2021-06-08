@@ -30,3 +30,7 @@
 .navbar-nav{
     flex-direction: row;
 }
+
+.table{
+    margin: 10px;
+}

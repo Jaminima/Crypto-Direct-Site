@@ -23,3 +23,23 @@ function CheckOut(){
             console.error("Error:", error);
         });
 }
+
+function LoadUserData(){
+    $.ajax({
+            url: "/API/Account",
+            method: 'GET',
+            xhrFields: { withCredentials: true },
+            success: LoadDataSuccess,
+            error: LoadDataFail
+        }
+    );
+}
+
+function LoadDataFail(){
+    location.href="./login.html";
+}
+
+function LoadDataSuccess(data){
+}
+
+LoadUserData();

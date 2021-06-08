@@ -21,6 +21,15 @@ function setWholeBalance(data){
     $("#wholeBalance").text(data);
 }
 
+function GotoAccount(){
+    location.href = "./account.html";
+}
+
+
+function GotoContact(){
+    location.href = "./contact.html";
+}
+
 $( window ).resize(windowLayout);
 windowLayout();
 getWholeBalance();
