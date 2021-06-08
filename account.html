@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Account</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.0.1/dist/quartz/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
@@ -12,7 +12,7 @@
   <script src="js/account.js"></script>
   <script defer src="js/page.js"></script>
 
-  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
@@ -39,8 +39,7 @@
 
 <div style="display: inline-flex"  id="mainDiv">
 
-  <div style="display: inline-flex">
-    <div class="card border-success mb-4 card-margin" style="max-width: 25rem;">
+    <div class="card border-success mb-4 card-margin" name="bodyCard">
       <div class="card-header">Account Details</div>
       <div class="card-body">
         <div>
@@ -53,7 +52,7 @@
       </div>
     </div>
 
-    <div class="card border-primary mb-4 card-margin" style="max-width: 25rem;">
+    <div class="card border-primary mb-4 card-margin" name="bodyCard">
       <div class="card-header">Deposit</div>
       <div class="card-body" style="">
         <div>
@@ -76,10 +75,8 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div style="display: inline-flex">
-    <div class="card border-warning mb-4 card-margin" style="max-width: 25rem;">
+    <div class="card border-warning mb-4 card-margin" name="bodyCard">
       <div class="card-header">Deposit Confirmation</div>
       <div class="card-body">
         <div>
@@ -93,7 +90,7 @@
             </fieldset>
           </form>
         </div>
-        <div class="alert alert-dismissible alert-warning" id="txErrorBox" style="display: none" >
+        <div class="alert alert-dismissible alert-warning" id="txErrorBox" style="display: none">
           <button type="button" class="btn-close" onclick="HideTxError()"></button>
           <strong>An Error Has Occurred</strong> <p id="txError"></p>
         </div>
@@ -103,7 +100,7 @@
       </div>
     </div>
 
-    <div class="card border-info mb-4 card-margin" style="max-width: 25rem;">
+    <div class="card border-info mb-4 card-margin" name="bodyCard">
       <div class="card-header">Withdrawal</div>
       <div class="card-body">
         <div>
@@ -145,7 +142,6 @@
         </div>
       </div>
     </div>
-  </div>
 
 </div>
 
