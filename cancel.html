@@ -9,7 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-  <script src="js/login.js"></script>
+  <script src="js/page.js"></script>
 
   <link rel="stylesheet" href="css/site.css">
 </head>
@@ -28,12 +28,23 @@
       <li class="nav-item">
         <a class="nav-link" href="account.html">Account</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="shop.html">Shop</a>
-      </li>
     </ul>
   </div>
 </nav>
+
+<div class="card border-danger mb-3 center card-margin" style="max-width: 35rem;">
+  <div class="card-header">Failed</div>
+  <div class="card-body">
+    <h4 class="card-title">Your Purchase Failed!</h4>
+    <p class="card-text">If you believe an error occurred please contact us. Otherwise try again.</p>
+    <div class="bottomdiv">
+      <div>
+        <button type="button" class="btn btn-danger" onclick="GotoAccount()">Goto Account</button>
+        <button type="button" class="btn btn-dark" onclick="GotoContact()">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

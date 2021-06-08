@@ -2,11 +2,14 @@
 var stripe = Stripe("pk_test_51Izjh5KFVoGzA5vxHI9fkxGWlqI91yaTslKkPxSTtwV4Xc7p6niViUx09SAAjUPv9w4Ur5dUdMBCzEW43tE83hNm00pfLPyGz4");
 
 function CheckOut(){
-    fetch("/API/execute-buy", {
+    let toBuy = $("#purchaseAmount").val();
+    if (toBuy<150||toBuy>1000) return;
+    fetch("/API/executebuy?toBuy="+toBuy, {
         method: "POST",
     })
         .then(function (response) {
-            return response.json();
+            if (response.status==200) return response.json();
+            else alert(response.json().error);
         })
         .then(function (session) {
             return stripe.redirectToCheckout({ sessionId: session.id });
@@ -23,3 +26,32 @@ function CheckOut(){
             console.error("Error:", error);
         });
 }
+
+function LoadUserData(){
+    $.ajax({
+            url: "/API/Account",
+            method: 'GET',
+            xhrFields: { withCredentials: true },
+            success: LoadDataSuccess,
+            error: LoadDataFail
+        }
+    );
+}
+
+function LoadDataFail(){
+    location.href="./login.html";
+}
+
+function LoadDataSuccess(data){
+}
+
+function BuyChanged(){
+    let crypto = $("#purchaseAmount").val()*price;
+    let fee = crypto * 0.05;
+
+    $("#cryptoPrice").text(crypto.toFixed(2));
+    $("#fee").text(fee.toFixed(2));
+    $("#totPrice").text((crypto + fee).toFixed(2));
+}
+
+LoadUserData();

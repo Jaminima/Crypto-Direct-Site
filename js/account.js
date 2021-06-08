@@ -1,7 +1,7 @@
 let userData;
 
 function UpdateUserData(){
-    $("#balVal").text(userData["balance"]);
+    $("#balVal").text(userData["balance"].toFixed(2));
     $("#usrNme").text(userData["nickname"]);
 
     $("#depositAddr").text(userData["inAddress"]);
@@ -21,7 +21,7 @@ function LoadUserData(){
 }
 
 function LoadDataFail(){
-    //location.href="./login.html";
+    location.href="./login.html";
 }
 
 function LoadDataSuccess(data){
