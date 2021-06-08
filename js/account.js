@@ -1,7 +1,7 @@
 let userData;
 
 function UpdateUserData(){
-    $("#balVal").text(userData["balance"]);
+    $("#balVal").text(userData["balance"].toFixed(2));
     $("#usrNme").text(userData["nickname"]);
 
     $("#depositAddr").text(userData["inAddress"]);

@@ -21,6 +21,8 @@ function setWholeBalance(data){
     $("#wholeBalance").text(data);
 }
 
+let price = 0.08;
+
 function getPrice(){
     $.ajax({
             url: "/API/Price",
@@ -33,6 +35,7 @@ function getPrice(){
 
 function setPrice(data){
     $("#curPrice").text(data);
+    price = data;
 }
 
 function GotoAccount(){

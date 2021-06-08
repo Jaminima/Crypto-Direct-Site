@@ -45,4 +45,13 @@ function LoadDataFail(){
 function LoadDataSuccess(data){
 }
 
+function BuyChanged(){
+    let crypto = $("#purchaseAmount").val()*price;
+    let fee = crypto * 0.05;
+
+    $("#cryptoPrice").text(crypto.toFixed(2));
+    $("#fee").text(fee.toFixed(2));
+    $("#totPrice").text((crypto + fee).toFixed(2));
+}
+
 LoadUserData();
