@@ -2,7 +2,7 @@
 var stripe = Stripe("pk_test_51Izjh5KFVoGzA5vxHI9fkxGWlqI91yaTslKkPxSTtwV4Xc7p6niViUx09SAAjUPv9w4Ur5dUdMBCzEW43tE83hNm00pfLPyGz4");
 
 function CheckOut(){
-    fetch("/API/execute-buy", {
+    fetch("/API/execute-buy?toBuy="+$("#purchaseAmount").val(), {
         method: "POST",
     })
         .then(function (response) {

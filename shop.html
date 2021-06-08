@@ -39,12 +39,14 @@
 
 <div style="display: inline-flex" id="mainDiv">
 
-  <div class="card border-primary mb-6 card-margin" style="max-width: 50rem; min-width: 10rem">
+  <div class="card border-primary mb-6 card-margin" style="max-width: 50rem; min-width: 20rem">
     <div class="card-header">Actions</div>
     <div class="card-body">
       <div>
         <h4 class="card-title">Have a Peek</h4>
         <p class="card-text">Not Much Here Really</p>
+        <input id="purchaseAmount" type="number" class="form-control" placeholder="Purchase Amount" step="0.1" max="100" min="10">
+        </br>
         <button type="button" class="btn btn-primary" onclick="CheckOut()">Checkout</button>
       </div>
     </div>
