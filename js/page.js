@@ -21,6 +21,20 @@ function setWholeBalance(data){
     $("#wholeBalance").text(data);
 }
 
+function getPrice(){
+    $.ajax({
+            url: "/API/Price",
+            method: 'GET',
+            xhrFields: { withCredentials: true },
+            success: setPrice
+        }
+    );
+}
+
+function setPrice(data){
+    $("#curPrice").text(data);
+}
+
 function GotoAccount(){
     location.href = "./account.html";
 }
@@ -33,3 +47,4 @@ function GotoContact(){
 $( window ).resize(windowLayout);
 windowLayout();
 getWholeBalance();
+getPrice();
