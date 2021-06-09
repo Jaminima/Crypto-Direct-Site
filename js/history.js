@@ -12,7 +12,7 @@ function LoadPurchaseDataSuccess(data){
     let d = data["data"];
 
     for (var i=0;i<Object.keys(d).length;i++) {
-        $("#PurchaseTable").append("<tr class=\"table\"><th scope=\"row\">"+d[i]["at"]+"</th><td>"+d[i]["crypto"]+" GRLC</td><td>$"+d[i]["price"]+"</td><td>"+d[i]["wentThrough"].toString()+"</td></tr>")
+        $("#PurchaseTable").append("<tr class=\"table\"><th scope=\"row\">"+d[i]["at"]+"</th><td>"+d[i]["crypto"]+" GRLC</td><td>$"+d[i]["price"].toFixed(2)+"</td><td>"+d[i]["wentThrough"].toString()+"</td></tr>")
     }
 }
 
