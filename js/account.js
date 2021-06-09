@@ -25,7 +25,7 @@ function LoadDataFail(){
 }
 
 function LoadDataSuccess(data){
-    userData = data;
+    userData = data["data"];
     UpdateUserData();
 }
 
@@ -52,7 +52,7 @@ function GenerateNewAddress(){
 }
 
 function GenerateNewSuccess(data){
-    userData["inAddress"] = data;
+    userData["inAddress"] = data["data"];
     UpdateUserData();
 }
 
@@ -69,8 +69,8 @@ function ConfirmTransaction(){
     );
 }
 
-function ConfrimTXFail(xhr, text, error){
-    $("#txError").text(xhr.responseText);
+function ConfrimTXFail(data){
+    $("#txError").text(data.responseJSON["message"]);
     $("#txErrorBox").show();
 }
 
@@ -81,7 +81,8 @@ function HideTxError(){
 function ConfirmTxSuccess(data){
     $("#txErrorBox").hide();
     $("#txId").val("");
-    LoadUserData();
+    userData = data["data"];
+    UpdateUserData();
 }
 
 function WithdrawConfirmation(){
@@ -108,14 +109,14 @@ function WithdrawAmount(){
 
 function WithdrawSuccess(data){
     $("#outTxIdBox").show();
-    $("#outTxId").text(data);
+    $("#outTxId").text(data["data"]);
     $("#withdrawAddr").val("");
     $("#withdrawAmount").val("");
     LoadUserData();
 }
 
-function WithdrawFail(xhr, text, error){
-    $("#WithdrawError").text(xhr.responseText);
+function WithdrawFail(data){
+    $("#WithdrawError").text(data.responseJSON["message"]);
     $("#WithdrawErrorBox").show();
 }
 

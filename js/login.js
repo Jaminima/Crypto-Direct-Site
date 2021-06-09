@@ -6,7 +6,8 @@ function Login(){
             url: "/API/Login?nick=" + username+"&pword="+password,
             method: 'GET',
             xhrFields: { withCredentials: true },
-            success: LoginSuccess
+            success: LoginSuccess,
+            error: LoginFail
         }
     );
 }
@@ -20,13 +21,23 @@ function Signup(){
             url: "/API/Register?nick=" + username+"&pword="+password+"&email="+email,
             method: 'GET',
             xhrFields: { withCredentials: true },
-            success: LoginSuccess
+            success: LoginSuccess,
+            error: LoginFail
         }
     );
 }
 
 function LoginSuccess(data){
     location.href = "./account.html";
+}
+
+function LoginFail(data){
+    $("#loginErrorBox").show();
+    $("#loginError").text(data.responseJSON["message"]);
+}
+
+function HideLoginError(){
+    $("#loginErrorBox").hide();
 }
 
 function GoBack(){

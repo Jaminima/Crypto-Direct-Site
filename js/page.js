@@ -18,7 +18,7 @@ function getWholeBalance(){
 }
 
 function setWholeBalance(data){
-    $("#wholeBalance").text(data);
+    $("#wholeBalance").text(data["data"]);
 }
 
 let price = 0.08;
@@ -34,7 +34,7 @@ function getPrice(){
 }
 
 function setPrice(data){
-    $("#curPrice").text(data);
+    $("#curPrice").text(data["data"]);
     price = data;
 }
 
