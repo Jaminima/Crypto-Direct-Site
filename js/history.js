@@ -29,11 +29,13 @@ function LoadTransactionData(){
 function LoadTransactionDataSuccess(data){
     let d = data["data"];
 
-    let flow = 0;
-    if (d["cryptoIn"]!=null) flow += d["cryptoIn"];
-    else if (d["cryptoOut"]!=null) flow -= d["cryptoOut"];
 
     for (var i=0;i<Object.keys(d).length;i++) {
+
+        let flow = 0;
+        if (d[i]["cryptoIn"]!=null) flow += d["cryptoIn"];
+        else if (d[i]["cryptoOut"]!=null) flow -= d["cryptoOut"];
+
         $("#TransactionTable").append("<tr class=\"table\"><th scope=\"row\">"+d[i]["at"]+"</th><td>"+flow+" GRLC</td><td>"+d[i]["txId"].toString()+"</td></tr>")
     }
 }
