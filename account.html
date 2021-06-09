@@ -11,6 +11,7 @@
 
   <script src="js/account.js"></script>
   <script defer src="js/page.js"></script>
+  <script defer src="js/history.js"></script>
 
   <link rel="stylesheet" href="css/site.css">
 </head>
@@ -40,7 +41,7 @@
   </div>
 </nav>
 
-<div style="display: inline-flex"  id="mainDiv">
+<div class="mainDiv">
 
     <div class="card border-success mb-4 card-margin" name="bodyCard">
       <div class="card-header">Account Details</div>
@@ -145,7 +146,31 @@
         </div>
       </div>
     </div>
+</div>
+</br>
+<div class="mainDiv">
+  <div class="card border-dark mb-4 card-margin" name="bodyCard">
+    <div class="card-header">Purchase History</div>
+    <div class="card-body">
+      <div>
+        <h4 class="card-title">Your Purchase's Through Us</h4>
 
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th scope="col">When</th>
+            <th scope="col">Crypto</th>
+            <th scope="col">Paid</th>
+            <th scope="col">Approved</th>
+          </tr>
+          </thead>
+          <tbody id="PurchaseTable">
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>

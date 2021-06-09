@@ -1,9 +1,9 @@
 function windowLayout(){
-    if ($(window).width()<$(window).height() || $(window).width()<$("#mainDiv").width()){
-        $("#mainDiv").css('display','block');
+    if ($(window).width()<$(window).height() || $(window).width()<$(".mainDiv").width()){
+        $(".mainDiv").css('display','block');
     }
     else{
-        $("#mainDiv").css('display','inline-flex');
+        $(".mainDiv").css('display','inline-flex');
     }
 }
 

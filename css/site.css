@@ -32,5 +32,8 @@
 }
 
 .table{
-    margin: 10px;
+}
+
+.main-div{
+    display: inline-flex;
 }
