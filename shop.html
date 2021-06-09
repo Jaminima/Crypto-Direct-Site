@@ -57,6 +57,12 @@
           Fee: <u>$<a id="fee">0</a></u></br>
           Total: <u>$<a id="totPrice">0</a></u>
         </p>
+
+        <div class="alert alert-dismissible alert-warning" id="shopErrorBox" style="display: none">
+          <button type="button" class="btn-close" onclick="HideShopError()"></button>
+          <strong>An Error Has Occurred</strong> <p id="shopError"></p>
+        </div>
+
         <div class="bottomdiv">
           <div>
             <button type="button" class="btn btn-success" onclick="CheckOut()">Checkout</button>

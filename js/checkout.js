@@ -8,7 +8,7 @@ function CheckOut(){
     })
         .then(function (response) {
             if (response.status==200) return response.json();
-            else alert(response.json().error);
+            else throw response.json()
         })
         .then(function (session) {
             return stripe.redirectToCheckout({ sessionId: session.id });
@@ -22,8 +22,16 @@ function CheckOut(){
             }
         })
         .catch(function (error) {
-            console.error("Error:", error);
+            error.then(data=>{
+                $("#shopErrorBox").show();
+                $("#shopError").text(data);
+            });
         });
+}
+
+
+function HideShopError(){
+    $("#shopErrorBox").hide();
 }
 
 function LoadUserData(){
