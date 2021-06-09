@@ -37,3 +37,7 @@
 .main-div{
     display: inline-flex;
 }
+
+td{
+    overflow-wrap: anywhere;
+}
