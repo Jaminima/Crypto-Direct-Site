@@ -34,8 +34,8 @@ function getPrice(){
 }
 
 function setPrice(data){
-    $("#curPrice").text(data["data"]);
-    price = data;
+    price = data["data"];
+    $("#curPrice").text(price);
 }
 
 function GotoAccount(){
