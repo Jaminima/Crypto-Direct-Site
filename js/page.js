@@ -7,18 +7,18 @@ function windowLayout(){
     }
 }
 
-function getWholeBalance(){
+function getSellableBalance(){
     $.ajax({
-            url: "/API/Balance",
+            url: "/API/SellableBalance",
             method: 'GET',
             xhrFields: { withCredentials: true },
-            success: setWholeBalance
+            success: setSellableBalance
         }
     );
 }
 
-function setWholeBalance(data){
-    $("#wholeBalance").text(data["data"]);
+function setSellableBalance(data){
+    $("#sellableBalance").text(data["data"]);
 }
 
 let price = 0.08;
@@ -49,5 +49,5 @@ function GotoContact(){
 
 $( window ).resize(windowLayout);
 windowLayout();
-getWholeBalance();
+getSellableBalance();
 getPrice();

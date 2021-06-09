@@ -3,7 +3,6 @@ var stripe = Stripe("pk_test_51Izjh5KFVoGzA5vxHI9fkxGWlqI91yaTslKkPxSTtwV4Xc7p6n
 
 function CheckOut(){
     let toBuy = $("#purchaseAmount").val();
-    if (toBuy<150||toBuy>1000) return;
     fetch("/API/executebuy?toBuy="+toBuy, {
         method: "POST",
     })
