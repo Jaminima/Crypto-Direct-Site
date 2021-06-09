@@ -35,3 +35,4 @@ function LoadTransactionDataSuccess(data){
 }
 
 LoadPurchaseData();
+LoadTransactionData();
