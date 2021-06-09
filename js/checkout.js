@@ -24,7 +24,7 @@ function CheckOut(){
         .catch(function (error) {
             error.then(data=>{
                 $("#shopErrorBox").show();
-                $("#shopError").text(data);
+                $("#shopError").text(data["error"]);
             });
         });
 }
