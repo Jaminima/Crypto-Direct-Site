@@ -33,8 +33,8 @@ function LoadTransactionDataSuccess(data){
     for (var i=0;i<Object.keys(d).length;i++) {
 
         let flow = 0;
-        if (d[i]["cryptoIn"]!=null) flow += d["cryptoIn"];
-        else if (d[i]["cryptoOut"]!=null) flow -= d["cryptoOut"];
+        if (d[i]["cryptoIn"]!=null) flow += d[i]["cryptoIn"];
+        else if (d[i]["cryptoOut"]!=null) flow -= d[i]["cryptoOut"];
 
         $("#TransactionTable").append("<tr class=\"table\"><th scope=\"row\">"+d[i]["at"]+"</th><td>"+flow+" GRLC</td><td>"+d[i]["txId"].toString()+"</td></tr>")
     }
