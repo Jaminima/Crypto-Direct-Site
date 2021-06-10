@@ -2,11 +2,37 @@ let userData;
 
 function UpdateUserData(){
     $("#balVal").text(userData["balance"].toFixed(2));
-    $("#usrNme").text(userData["nickname"]);
+    $("#usrName").val(userData["nickname"]);
+    $("#usrEmail").val(userData["email"]);
+    $("#usrOutAddress").val(userData["outAddress"]);
 
     $("#depositAddr").text(userData["inAddress"]);
 
     $("#withdrawAmount").attr({"max":userData["balance"]});
+}
+
+function SaveUserDetails(){
+    let params = "newNickname="+$("#usrName").val()+"&newEmail="+$("#usrEmail").val()+"&grlcOut="+$("#usrOutAddress").val();
+
+    if ($("#usrPassword").val().length>0) params+="&newPassword="+$("#usrPassword").val();
+
+    $.ajax({
+            url: "/API/Update?"+params,
+            method: 'GET',
+            xhrFields: { withCredentials: true },
+            success: LoadDataSuccess,
+            error: SaveUserFail
+        }
+    );
+}
+
+function HideUpdateError(){
+    $("#updateErrorBox").hide();
+}
+
+function SaveUserFail(data){
+    $("#updateErrorBox").show();
+    $("#updateError").text(data.responseJSON["message"]);
 }
 
 function LoadUserData(){
