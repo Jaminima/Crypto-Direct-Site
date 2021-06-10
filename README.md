@@ -1,4 +1,4 @@
-# Crypto Direct Site
+# GRLC Shop Site
 Builds on <a href="https://raw.githubusercontent.com//Jaminima/Crypto-Wallet-Wrapper/tree/main/Simple-Site">Jaminima/Crypto-Wallet-Wrapper</a>
 
 ![image](https://raw.githubusercontent.com/Jaminima/Crypto-Direct-Site/main/imgs/Desktop/Account.png)
