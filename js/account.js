@@ -1,6 +1,8 @@
 let userData;
 
 function UpdateUserData(){
+    $("#usrPassword").val("");
+
     $("#balVal").text(userData["balance"].toFixed(2));
     $("#usrName").val(userData["nickname"]);
     $("#usrEmail").val(userData["email"]);
