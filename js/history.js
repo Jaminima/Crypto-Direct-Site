@@ -11,6 +11,8 @@ function LoadPurchaseData(){
 function LoadPurchaseDataSuccess(data){
     let d = data["data"];
 
+    $("#PurchaseTable")[0].innerHTML="";
+
     for (var i=0;i<Object.keys(d).length;i++) {
         $("#PurchaseTable").append("<tr class=\"table\"><th scope=\"row\">"+d[i]["at"]+"</th><td>"+d[i]["crypto"]+" GRLC</td><td>$"+d[i]["price"].toFixed(2)+"</td><td>"+d[i]["wentThrough"].toString()+"</td></tr>")
     }
@@ -29,6 +31,7 @@ function LoadTransactionData(){
 function LoadTransactionDataSuccess(data){
     let d = data["data"];
 
+    $("#TransactionTable")[0].innerHTML="";
 
     for (var i=0;i<Object.keys(d).length;i++) {
 

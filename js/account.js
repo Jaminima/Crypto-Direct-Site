@@ -110,6 +110,7 @@ function ConfirmTxSuccess(data){
     $("#txId").val("");
     userData = data["data"];
     UpdateUserData();
+    LoadTransactionData();
 }
 
 function WithdrawConfirmation(){
@@ -140,6 +141,7 @@ function WithdrawSuccess(data){
     $("#withdrawAddr").val("");
     $("#withdrawAmount").val("");
     LoadUserData();
+    LoadTransactionData();
 }
 
 function WithdrawFail(data){
