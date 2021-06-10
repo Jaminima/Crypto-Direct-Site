@@ -140,6 +140,11 @@
           </form>
         </div>
 
+        <div class="alert alert-dismissible alert-info" id="outTxIdBox" style="display: none">
+          <button type="button" class="btn-close" onclick="HideWithdrawTx()"></button>
+          <strong>Transaction Id: </strong> <p id="outTxId"></p>
+        </div>
+
         <div class="bottomdiv">
           <div id="WithdrawConfirm" style="display: none" >
             <div class="alert alert-warning">
@@ -150,11 +155,6 @@
           </div>
 
           <button type="button" class="btn btn-info" id="WithdrawButton" onclick="WithdrawConfirmation()">Withdraw</button>
-
-          <div class="alert alert-dismissible alert-info" id="outTxIdBox" style="display: none">
-            <button type="button" class="btn-close" onclick="HideWithdrawTx()"></button>
-            <strong>Transaction Id: </strong> <p id="outTxId"></p>
-          </div>
         </div>
       </div>
     </div>

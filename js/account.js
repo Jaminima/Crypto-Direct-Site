@@ -9,6 +9,7 @@ function UpdateUserData(){
     $("#depositAddr").text(userData["inAddress"]);
 
     $("#withdrawAmount").attr({"max":userData["balance"]});
+    $("#withdrawAddr").val(userData["outAddress"]);
 }
 
 function SaveUserDetails(){
