@@ -41,3 +41,7 @@
 td{
     overflow-wrap: anywhere;
 }
+
+.alert{
+    max-width: 25rem;
+}
