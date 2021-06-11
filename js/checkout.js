@@ -1,5 +1,5 @@
 // Create an instance of the Stripe object with your publishable API key
-var stripe = Stripe("pk_live_51Izjh5KFVoGzA5vxjGZ2wp161nMGy5s5niJnw61eT2R3Z4jCELE5W5TlEJq25c3BMRT6Rx3KXOVVFicxBsr5l4tD00eKEdOgr3");
+var stripe = Stripe("pk_test_51Izjh5KFVoGzA5vxHI9fkxGWlqI91yaTslKkPxSTtwV4Xc7p6niViUx09SAAjUPv9w4Ur5dUdMBCzEW43tE83hNm00pfLPyGz4");
 
 function CheckOut(){
     let toBuy = $("#purchaseAmount").val();
