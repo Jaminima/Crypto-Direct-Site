@@ -135,6 +135,10 @@ function WithdrawCancel(){
     $("#WithdrawConfirm").hide();
 }
 
+function SetWithDrawToAll(){
+    $("#withdrawAmount").val(userData["balance"]);
+}
+
 function WithdrawAmount(){
     $.ajax({
             url: "/API/Withdraw?outAddr="+$("#withdrawAddr").val()+"&amount="+$("#withdrawAmount").val(),
