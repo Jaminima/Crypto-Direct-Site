@@ -74,7 +74,8 @@ function GenerateNewAddress(){
             url: "/API/PayInAddress",
             method: 'GET',
             xhrFields: { withCredentials: true },
-            success: GenerateNewSuccess
+            success: GenerateNewSuccess,
+            error: GenerateNewFail
         }
     );
     GenerateCancel();
@@ -83,6 +84,15 @@ function GenerateNewAddress(){
 function GenerateNewSuccess(data){
     userData["inAddress"] = data["data"];
     UpdateUserData();
+}
+
+function HideDepositError(){
+    $("#depositErrorBox").hide();
+}
+
+function GenerateNewFail(data){
+    $("#depositErrorBox").show();
+    $("#depositError").text(data.responseJSON["message"]);
 }
 
 function ConfirmTransaction(){

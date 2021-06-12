@@ -85,6 +85,12 @@
             Address: <u><a id="depositAddr">N/A</a></u></br>
           </p>
         </div>
+
+        <div class="alert alert-dismissible alert-warning" id="depositErrorBox" style="display: none">
+          <button type="button" class="btn-close" onclick="HideDepositError()"></button>
+          <strong>An Error Has Occurred</strong> <p id="depositError"></p>
+        </div>
+
         <div class="bottomdiv">
           <button type="button" class="btn btn-primary" id="GenerateButton" onclick="GenerateNewAddressConfirmation()">Generate Address</button>
 
