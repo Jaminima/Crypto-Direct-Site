@@ -3,7 +3,7 @@ let userData;
 function UpdateUserData(){
     $("#usrPassword").val("");
 
-    $("#balVal").text(userData["balance"].toFixed(2));
+    $("#balVal").text(userData["balance"]);
     $("#usrName").val(userData["nickname"]);
     $("#usrEmail").val(userData["email"]);
     $("#usrOutAddress").val(userData["outAddress"]);
