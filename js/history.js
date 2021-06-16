@@ -14,7 +14,7 @@ function LoadPurchaseDataSuccess(data){
     $("#PurchaseTable")[0].innerHTML="";
 
     for (var i=0;i<Object.keys(d).length;i++) {
-        $("#PurchaseTable").append("<tr class=\"table\"><th scope=\"row\">"+d[i]["at"]+"</th><td>"+d[i]["crypto"]+" GRLC</td><td>$"+d[i]["price"].toFixed(2)+"</td><td>"+d[i]["wentThrough"].toString()+"</td></tr>")
+        $("#PurchaseTable").append("<tr class=\"table\"><th scope=\"row\">"+d[i]["at"]+"</th><td>"+d[i]["crypto"]+" GRLC</td><td>$"+d[i]["price"].toFixed(2)+"</td><td>"+d[i]["wentThrough"].toString()+"</td><td>"+d[i]["balPaid"].toString()+"</td></tr>")
     }
 }
 
