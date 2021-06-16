@@ -3,7 +3,11 @@ function Login(){
     let password = $("#password").val();
 
     $.ajax({
-            url: "/API/Login?nick=" + username+"&pword="+password,
+            url: "/API/Login",
+            headers:{
+                "nick":username,
+                "pword":password
+            },
             method: 'GET',
             xhrFields: { withCredentials: true },
             success: LoginSuccess,
@@ -18,7 +22,12 @@ function Signup(){
     let email = $("#email").val();
 
     $.ajax({
-            url: "/API/Register?nick=" + username+"&pword="+password+"&email="+email,
+            url: "/API/Register",
+            headers: {
+                "nick":username,
+                "pword":password,
+                "email":email
+            },
             method: 'GET',
             xhrFields: { withCredentials: true },
             success: LoginSuccess,

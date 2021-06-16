@@ -15,13 +15,19 @@ function UpdateUserData(){
 }
 
 function SaveUserDetails(){
-    let params = "newNickname="+$("#usrName").val()+"&newEmail="+$("#usrEmail").val()+"&grlcOut="+$("#usrOutAddress").val();
+    let headers = {
+        "newNickname" : $("#usrName").val(),
+        "newEmail":$("#usrEmail").val(),
+        "grlcOut":$("#usrOutAddress").val(),
+        "newPassword":null
+    }
 
-    if ($("#usrPassword").val().length>0) params+="&newPassword="+$("#usrPassword").val();
+    if ($("#usrPassword").val().length>0) headers.newPassword=$("#usrPassword").val();
 
     $.ajax({
-            url: "/API/Update?"+params,
+            url: "/API/Update",
             method: 'GET',
+            headers: headers,
             xhrFields: { withCredentials: true },
             success: LoadDataSuccess,
             error: SaveUserFail
@@ -99,7 +105,10 @@ function ConfirmTransaction(){
     let tx = $("#txId").val();
     if (tx.length==0) return;
     $.ajax({
-            url: "/API/Confirm?txId="+tx,
+            url: "/API/Confirm",
+            headers: {
+                "txId":tx
+            },
             method: 'GET',
             xhrFields: { withCredentials: true },
             success: ConfirmTxSuccess,
@@ -141,7 +150,11 @@ function SetWithDrawToAll(){
 
 function WithdrawAmount(){
     $.ajax({
-            url: "/API/Withdraw?outAddr="+$("#withdrawAddr").val()+"&amount="+$("#withdrawAmount").val(),
+            url: "/API/Withdraw",
+            headers:{
+                "outAddr":$("#withdrawAddr").val(),
+                "amount":$("#withdrawAmount").val()
+            },
             method: 'GET',
             xhrFields: { withCredentials: true },
             success: WithdrawSuccess,

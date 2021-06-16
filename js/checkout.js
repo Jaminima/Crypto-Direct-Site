@@ -3,8 +3,11 @@ var stripe = Stripe("pk_live_51Izjh5KFVoGzA5vxjGZ2wp161nMGy5s5niJnw61eT2R3Z4jCEL
 
 function CheckOut(){
     let toBuy = $("#purchaseAmount").val();
-    fetch("/API/executebuy?toBuy="+toBuy, {
+    fetch("/API/executebuy", {
         method: "POST",
+        headers:{
+            "toBuy":toBuy
+        }
     })
         .then(function (response) {
             if (response.status==200) return response.json();
