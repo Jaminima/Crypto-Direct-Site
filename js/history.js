@@ -3,7 +3,10 @@ function LoadPurchaseData(){
             url: "/API/Purchases",
             method: 'GET',
             xhrFields: { withCredentials: true },
-            success: LoadPurchaseDataSuccess
+            success: LoadPurchaseDataSuccess,
+            error: function (){
+                setTimeout(LoadPurchaseData, 5000);
+            }
         }
     );
 }
@@ -11,7 +14,6 @@ function LoadPurchaseData(){
 function LoadPurchaseDataSuccess(data){
     let d = data["data"];
     if (d == null){
-        setTimeout(LoadPurchaseData, 5000);
         return;
     }
 
@@ -27,7 +29,10 @@ function LoadTransactionData(){
             url: "/API/Transactions",
             method: 'GET',
             xhrFields: { withCredentials: true },
-            success: LoadTransactionDataSuccess
+            success: LoadTransactionDataSuccess,
+            error: function (){
+                setTimeout(LoadTransactionData, 5000);
+            }
         }
     );
 }
@@ -35,7 +40,6 @@ function LoadTransactionData(){
 function LoadTransactionDataSuccess(data){
     let d = data["data"];
     if (d == null){
-        setTimeout(LoadTransactionData, 5000);
         return;
     }
 
