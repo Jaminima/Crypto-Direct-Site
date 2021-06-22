@@ -9,6 +9,11 @@ function LoadPurchaseData(){
 }
 
 function LoadPurchaseDataSuccess(data){
+    if (data == null){
+        setTimeout(LoadPurchaseData, 5000);
+        return;
+    }
+
     let d = data["data"];
 
     $("#PurchaseTable")[0].innerHTML="";
@@ -29,6 +34,11 @@ function LoadTransactionData(){
 }
 
 function LoadTransactionDataSuccess(data){
+    if (data == null){
+        setTimeout(LoadTransactionData, 5000);
+        return;
+    }
+
     let d = data["data"];
 
     $("#TransactionTable")[0].innerHTML="";
