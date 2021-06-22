@@ -76,60 +76,6 @@
       </div>
     </div>
 
-    <div class="card border-primary mb-4 card-margin" name="bodyCard">
-      <div class="card-header">Deposit</div>
-      <div class="card-body">
-        <div>
-          <h4 class="card-title">Depositing Into your Account</h4>
-          <p class="card-text">
-            Address: <u><a id="depositAddr">N/A</a></u></br>
-          </p>
-        </div>
-
-        <div class="alert alert-dismissible alert-warning" id="depositErrorBox" style="display: none">
-          <button type="button" class="btn-close" onclick="HideDepositError()"></button>
-          <strong>An Error Has Occurred</strong> <p id="depositError"></p>
-        </div>
-
-        <div class="bottomdiv">
-          <button type="button" class="btn btn-primary" id="GenerateButton" onclick="GenerateNewAddressConfirmation()">Generate Address</button>
-
-          <div id="GenerateConfirm" style="display: none" >
-            <div class="alert alert-danger">
-              <strong>Be Aware!</strong> Generating a new Wallet Address means <strong>ALL</strong> deposits you haven't confirmed will be lost.
-            </div>
-
-            <button type="button" class="btn btn-primary" id="GenerateYesButton" onclick="GenerateNewAddress()">Confirm</button>
-            <button type="button" class="btn btn-dark" id="GenerateCancelButton" onclick="GenerateCancel()">Cancel</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card border-warning mb-4 card-margin" name="bodyCard">
-      <div class="card-header">Deposit Confirmation</div>
-      <div class="card-body">
-        <div>
-        <h4 class="card-title">Confirm Deposit Into your Account</h4>
-          <form>
-            <fieldset>
-              <div class="form-group">
-                <input id="txId" type="text" class="form-control" placeholder="Transaction Id">
-              </div>
-              </br>
-            </fieldset>
-          </form>
-        </div>
-        <div class="alert alert-dismissible alert-warning" id="txErrorBox" style="display: none">
-          <button type="button" class="btn-close" onclick="HideTxError()"></button>
-          <strong>An Error Has Occurred</strong> <p id="txError"></p>
-        </div>
-        <div class="bottomdiv">
-          <button type="button" class="btn btn-warning" onclick="ConfirmTransaction()">Confirm</button>
-        </div>
-      </div>
-    </div>
-
     <div class="card border-info mb-4 card-margin" name="bodyCard">
       <div class="card-header">Withdrawal</div>
       <div class="card-body">
@@ -172,9 +118,6 @@
         </div>
       </div>
     </div>
-</div>
-</br>
-<div class="mainDiv">
   <div class="card border-dark mb-4 card-margin" name="bodyCard">
     <div class="card-header">Purchase History</div>
     <div class="card-body">
